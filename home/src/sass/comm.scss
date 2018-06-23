@@ -1,0 +1,144 @@
+@charset "UTF-8";
+$r: 1/16/(750/320); //字体大小
+/* 字体大小、margin、padding间距 start */
+@for $i from 0 through 5{
+    .fs-#{28+$i*2}{
+        font-size: (28+$i*2)*1rem*$r;
+    }
+    .mr-#{5+$i*5}{
+        margin-right: (5+$i*5)*1rem*$r;
+    }
+    .mt-#{5+$i*5}{
+        margin-top: (5+$i*5)*1rem*$r;
+    }
+    .mb-#{5+$i*5}{
+        margin-bottom: (5+$i*5)*1rem*$r;
+    }
+    .ml-#{5+$i*5}{
+        margin-left: (5+$i*5)*1rem*$r;
+    }
+    .pt-#{5+$i*5}{
+        padding-top: (5+$i*5)*1rem*$r;
+    }
+    .pr-#{5+$i*5}{
+        padding-right: (5+$i*5)*1rem*$r;
+    }
+    .pb-#{5+$i*5}{
+        padding-bottom: (5+$i*5)*1rem*$r;
+    }
+    .pl-#{5+$i*5}{
+        padding-left: (5+$i*5)*1rem*$r;
+    }
+}
+/* 字体大小、margin、padding间距 end */
+.color-333{
+    color: #333;
+}
+.color-666{
+    color: #666;
+}
+.color-999{
+    color: #999;
+}
+.mt-140{
+    margin-top: 140rem*$r !important;
+}
+/*  flex布局 start */
+.flex{
+    display: flex;
+}
+.flex-1{
+    flex: 1;
+}
+.flex-jc-sb{
+    justify-content: space-between;
+}
+.flex-jc-c{
+    justify-content: center;
+}
+.flex-ai-c{
+    align-items: center;
+}
+.flex-d-c{
+    flex-direction: column;
+}
+/* flex布局 end */
+.tx-c {
+    text-align: center;
+}
+
+.tx-l {
+    text-align: left;
+}
+
+.tx-r {
+    text-align: right;
+}
+
+//边框线
+.bor-t {
+    border-top: 1px solid #e5e5e5;
+}
+
+.bor-b {
+    border-bottom: 1px solid #e5e5e5;
+}
+.bor-l{
+    border-left: 1px solid #e5e5e5;
+}
+.bor-b-none{
+    border-bottom: none;
+}
+/* 背景模糊效果 */
+.blur{
+    filter: blur(3px);
+}
+//清除浮动
+.clear {
+    zoom: 1;
+}
+
+.clear:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.db {
+    display: block;
+}
+
+.dib {
+    display: inline-block;
+}
+
+.di-vm {
+    display: inline-block;
+    vertical-align: middle;
+    /* 垂直居中 */
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+
+/*
+    fixed底部定位
+*/
+.position-fixed-t {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.position-fixed-b {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

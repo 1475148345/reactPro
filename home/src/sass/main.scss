@@ -1,0 +1,241 @@
+@charset "UTF-8";
+@import "reset.scss";
+@import "comm.scss";
+@import "base.scss";
+@import "animate.scss";
+$r: 1/16/(750/320); //字体大小
+/* 我的 */
+.my{
+    .bg{
+        height: 180rem*$r;
+        background-color: #395dcf;
+    }
+    .avatar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -127rem*$r;
+        div{
+            width: 254rem*$r;
+            height: 254rem*$r;
+            border-radius: 254rem*$r;
+            background-color: #ccc;
+            border: 10rem*$r solid #dadada;
+            position: relative;
+            img{
+                border-radius: 100%;
+            }
+        }
+        p{
+            font-size: 36rem*$r;
+            color: #000000;
+            padding: 20rem*$r;
+        }
+        span{
+            @include btn(none,#395dcf,20,160,40,22,#fff);
+            display: block;
+            margin-bottom: 30rem*$r;
+        }
+    }
+}
+.man-icon,.woman-icon{
+    @include circle(40rem*$r,#3d9dff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 3rem*$r;
+    top:12rem*$r;
+    &::after{
+        content: "";
+        @include bg-icon(24,24,'../images/my/man-icon.png');
+    }
+}
+.woman-icon{
+    &::after{
+        content: "";
+        @include bg-icon(24,24,'../images/my/woman.png');
+    }
+}
+/* 用户名 */
+.update{
+    padding:30rem*$r;
+    box-sizing: border-box;
+    input{
+        @include input(1px solid #dcdcdc,#fff,0,100%,100rem*$r,0 30rem*$r,32rem*$r,#666);
+        border-radius: 5rem*$r;
+    }
+    /* 绑定手机 */
+    .bind-phone{
+        .bind-phone-icon,.not-bind-phone-icon{
+            @include bg-icon(106,122,'../images/my/bind-phone-icon.png');
+            margin-top: 300px;
+            margin: 150px auto 70px auto;
+        }
+        .not-bind-phone-icon{
+            @include bg-icon(106,122,'../images/my/not-bind-phone-icon.png');
+        }
+        span{
+            font-size: 40rem*$r;
+            display: block;
+            margin: 0 auto;
+            text-align: center;
+        }
+    }
+    /* 验证码 */
+    .get-yzm{
+        margin-top: 20px;
+        input{
+            width: 60%;
+        }
+        span{
+            width: 30%;
+            border: 1px solid #dcdcdc;
+            height: 100rem*$r;
+            margin-left: 20rem*$r;
+            text-align: center;
+            line-height: 100rem*$r;
+            background-color: #41cbc9;
+            border-radius: 10rem*$r;
+            color: #fff;
+        }
+    }
+}
+/* 发布需求 */
+.release-require{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:rgba(255, 255, 255, .85);
+    z-index: 222;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    nav{
+        padding: 0 30rem*$r;
+        flex-wrap: wrap;
+    }
+    span{
+        width: calc(100%/3);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 60rem*$r;
+    }
+    @for $i from 1 through 8 {
+        .icon#{$i}{
+            margin-bottom: 20rem*$r;
+            @include bg-icon(125,125,'../images/releaseRequire/icon#{$i}.png');
+        }
+    }
+    .cancel-icon{
+        @include bg-icon(80,80,'../images/releaseRequire/icon-cancel.png');
+        margin: 100rem*$r auto 40rem*$r auto;
+    }
+}
+.release-bg{
+    width: 100%;
+    height: 100vh;
+    background: url('../images/releaseRequire/bg.png') no-repeat center;
+    background-size: cover;
+    filter: blur(2px);
+    display: block;
+}
+/* list-input-sty */
+.list-input-sty{
+    background-color: #fff;
+    padding: 0 20rem*$r;
+    border-bottom: 1px solid #dcdcdc;
+    span{
+        font-size: 36rem*$r;
+        color: #333;
+    }
+    label{
+        color: red;
+    }
+    input{
+        min-width: 500rem*$r;
+        border: none;
+        padding: 30rem*$r 0;
+        outline: none;
+        text-align: right;
+        font-size: 28rem*$r;
+        color: #666;
+        &::-webkit-input-placeholder{
+            color: #999;
+        }
+        &:disabled{
+            background-color: #fff;
+            margin-right: 20rem*$r; 
+        }
+    }
+}
+/* textarea-sty */
+.textarea-sty{
+    background-color: #fff;
+    margin-top: 20rem*$r;
+    padding: 0 20rem*$r;
+    p{
+        font-size: 36rem*$r;
+        color: #333;
+        padding: 30rem*$r 0;
+        border-bottom: 1px solid #dcdcdc;
+    }
+    textarea{
+        padding: 30rem*$r 0;
+        width: 100%;
+        border: none;
+        min-height: 300rem*$r;
+        font-size: 28rem*$r;
+        color: #666;
+        resize: none;
+        outline: none;
+        &::-webkit-input-placeholder{
+            color: #999;
+        }
+    }
+    span{
+        display: block;
+        text-align: right;
+        font-size: 26rem*$r;
+        padding-bottom: 30rem*$r;
+        b{
+            color: #395dcf;
+        }
+    }
+}
+/* 上传图片 */
+.upload-img{
+    background-color: #fff;
+    margin-top: 20rem*$r;
+    padding: 0 10rem*$r;
+    p{
+        font-size: 36rem*$r;
+        color: #333;
+        padding: 30rem*$r 0;
+        border-bottom: 1px solid #dcdcdc;
+    }
+    >div{
+        margin-top: 30rem*$r;
+        flex-wrap: wrap;
+        div{
+            width: 162.5rem*$r;
+            height: 162.5rem*$r;
+            margin: 0 10rem*$r 20rem*$r 10rem*$r;
+            background-color: #ccc;
+            border-radius: 10rem*$r;
+            position: relative;
+        }
+    }
+    .add{
+        @include bg-icon(162.5,162.5,'../images/releaseRequire/add-image.png');
+    }
+    .delete{
+        @include bg-icon(30,30,'../images/releaseRequire/delete.png');
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}

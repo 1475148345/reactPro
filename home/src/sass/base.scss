@@ -1,0 +1,238 @@
+@charset "UTF-8";
+@import "animate.scss";
+$r: 1/16/(750/320); //字体大小
+.App {
+    font-family: "PingFang,微软雅黑";
+    color: #666;
+    background-color: #fff;
+    font-size: 24rem*$r !important;
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    flex-direction: column;
+    overflow: scroll;
+    letter-spacing: 2rem*$r;
+}
+
+/*按钮边框样式*/
+@mixin btn($border, $background-color, $border-radius, $width, $height, $font-size, $color) {
+    border: $border;
+    background-color: $background-color;
+    border-radius: $border-radius*1rem*$r;
+    text-align: center;
+    width: $width*1rem*$r;
+    height: $height*1rem*$r;
+    line-height: $height*1rem*$r;
+    font-size: $font-size*1rem*$r;
+    color: $color;
+}
+
+/*输入框、下拉框、文本域样式 APP*/
+@mixin input($border, $background-color, $border-radius, $width, $height,$padding,$fontSize,$color) {
+    border: $border;
+    background-color: $background-color;
+    border-radius: $border-radius;
+    width: $width;
+    height: $height;
+    line-height: $height;
+    padding: $padding;
+    display: block;
+    font-size: $fontSize;
+    color: $color;
+}
+/* 背景图 */
+@mixin bg-icon($width,$height,$backgroundUrl){
+    width: $width*1rem*$r;
+    height: $height*1rem*$r;
+    background: url($backgroundUrl) no-repeat center;
+    background-size:contain;
+    display: block;
+}
+/* 文字超出多行隐藏 */
+@mixin text-overflow($maxWidth,$showLine){
+    max-width: $maxWidth*1rem*$r;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $showLine;
+    overflow: hidden;
+}
+/* 圆 */
+@mixin circle($width,$backgroundColor){
+    width: $width;
+    height: $width;
+    border-radius: $width;
+    background-color: $backgroundColor;
+    display: block;
+    overflow: hidden;
+}
+/* header start */
+header{
+    font-size: 36rem*$r;
+    color: #fff;
+    background-color: #395dcf;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    .l,.r{
+        padding: 0 30rem*$r;
+        height: 86rem*$r;
+        min-width: 120rem*$r;
+        display: flex;
+        align-items: center;
+    }
+    h1{
+        font-weight: bold;
+    }
+    .angle-left{
+        @include bg-icon(23,38 ,'../images/return-back.png' )
+    }
+}
+/* header end */
+/* contain start */
+
+.contain{
+    flex: 1;
+    overflow: scroll;
+    padding-top: 86rem*$r;
+    padding-bottom: 100rem*$r;
+}
+/* contain end */
+/* footer start */
+footer{
+    padding: 15rem*$r 20rem*$r;
+    border-top: 1px solid #e5e5e5;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100rem*$r;
+    @for $i from 1 through 5{
+        .icon#{$i}{
+            @include bg-icon(40, 40, '../images/f-icon#{$i}.png');
+            margin-bottom: 10rem*$r;
+        }
+    }
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 120rem*$r;
+        color: #666;
+        &.active{
+            color: #ac2417;
+            @for $i from 1 through 5{
+                .icon#{$i}{
+                    @include bg-icon(40, 40, '../images/f-icon#{$i}-active.png');
+                    margin-bottom: 10rem*$r;
+                }
+            }
+        }
+    }
+}
+/* footer end */
+/* Base.js start */
+.list-botton{
+    height: 88rem*$r;
+    padding: 0 30rem*$r;
+    font-size: 32rem*$r;
+    color: #000;
+    background-color: #fff;
+    @for $i from 1 through 6{
+        .icon#{$i}{
+            @include bg-icon(40, 40, '../images/my/icon#{$i}.png');
+        }
+    }
+    &:hover{
+        background-color: darken(#fff, 5%);
+    }
+    b{
+        flex: 1;
+        margin: 0 30rem*$r;
+    }
+    .avatar{
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 30rem*$r;
+        img{
+            width: 80rem*$r;
+            height: 80rem*$r;
+            border-radius: 80rem*$r;
+        }
+    }
+    .check-radio{
+        @include bg-icon(21, 17,'../images/check-radio.png' );
+    }
+}
+.my-info-sty{
+    height: 140rem*$r;
+    padding-left: 0;
+    margin-left: 30rem*$r;
+    border-bottom: 1px solid #e5e5e5;
+}
+.angle-right{
+    @include bg-icon(16, 28, '../images/my/angle-right.png');
+}
+/* Base.js end */
+/* SubmitBotton start */
+.submit-botton{
+    @include btn(none,#395dcf,40,560,80,30,#fff);
+    margin: 30rem*$r auto;
+}
+/* SubmitBotton end */
+/* pc-dialog start */
+.pc-select{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: auto;
+    .ceng{
+        width: 100%;
+        height: 100%;
+        background: rgba(0,0,0,.3);
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    .content{
+        position: fixed;
+        width: 100%;
+        height: 500rem*$r;
+        bottom: 0;
+        left: 0;
+        background-color: #fff;
+    }
+    .title{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid #dcdcdc;
+        span{
+            padding: 30rem*$r 50rem*$r;
+            color: #65b3e5;
+            font-size: 28rem*$r;
+            &:nth-child(2){
+                font-weight: bold;
+                color: #333;
+            }
+        }
+    }
+    ul{
+        height: 400rem*$r;
+        overflow: scroll;
+    }
+    li{
+        padding: 30rem*$r;
+        text-align: center;
+        border-top: 1px solid #dcdcdc;
+        &:first-child{
+            border-top: 0;
+        }
+        &:active,&:hover{
+            background-color: #dcdcdc;
+        }
+    }
+}
+/* pc-dialog end */

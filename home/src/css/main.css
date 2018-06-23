@@ -1,0 +1,1049 @@
+@charset "UTF-8";
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box; }
+
+em,
+i {
+  font-style: normal; }
+
+b,
+strong {
+  font-weight: normal; }
+
+img {
+  border: none;
+  vertical-align: top;
+  max-width: 100%;
+  width: 100%;
+  height: 100%; }
+
+a {
+  text-decoration: none; }
+
+a:active {
+  outline: 0; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+@font-face {
+  font-family: 'PingFang';
+  src: url("../font/PingFangRegular.ttf");
+  /* IE9+ */ }
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+input, select, textarea {
+  box-sizing: border-box; }
+
+/* 字体大小、margin、padding间距 start */
+.fs-28 {
+  font-size: 0.74667rem; }
+
+.mr-5 {
+  margin-right: 0.13333rem; }
+
+.mt-5 {
+  margin-top: 0.13333rem; }
+
+.mb-5 {
+  margin-bottom: 0.13333rem; }
+
+.ml-5 {
+  margin-left: 0.13333rem; }
+
+.pt-5 {
+  padding-top: 0.13333rem; }
+
+.pr-5 {
+  padding-right: 0.13333rem; }
+
+.pb-5 {
+  padding-bottom: 0.13333rem; }
+
+.pl-5 {
+  padding-left: 0.13333rem; }
+
+.fs-30 {
+  font-size: 0.8rem; }
+
+.mr-10 {
+  margin-right: 0.26667rem; }
+
+.mt-10 {
+  margin-top: 0.26667rem; }
+
+.mb-10 {
+  margin-bottom: 0.26667rem; }
+
+.ml-10 {
+  margin-left: 0.26667rem; }
+
+.pt-10 {
+  padding-top: 0.26667rem; }
+
+.pr-10 {
+  padding-right: 0.26667rem; }
+
+.pb-10 {
+  padding-bottom: 0.26667rem; }
+
+.pl-10 {
+  padding-left: 0.26667rem; }
+
+.fs-32 {
+  font-size: 0.85333rem; }
+
+.mr-15 {
+  margin-right: 0.4rem; }
+
+.mt-15 {
+  margin-top: 0.4rem; }
+
+.mb-15 {
+  margin-bottom: 0.4rem; }
+
+.ml-15 {
+  margin-left: 0.4rem; }
+
+.pt-15 {
+  padding-top: 0.4rem; }
+
+.pr-15 {
+  padding-right: 0.4rem; }
+
+.pb-15 {
+  padding-bottom: 0.4rem; }
+
+.pl-15 {
+  padding-left: 0.4rem; }
+
+.fs-34 {
+  font-size: 0.90667rem; }
+
+.mr-20 {
+  margin-right: 0.53333rem; }
+
+.mt-20 {
+  margin-top: 0.53333rem; }
+
+.mb-20 {
+  margin-bottom: 0.53333rem; }
+
+.ml-20 {
+  margin-left: 0.53333rem; }
+
+.pt-20 {
+  padding-top: 0.53333rem; }
+
+.pr-20 {
+  padding-right: 0.53333rem; }
+
+.pb-20 {
+  padding-bottom: 0.53333rem; }
+
+.pl-20 {
+  padding-left: 0.53333rem; }
+
+.fs-36 {
+  font-size: 0.96rem; }
+
+.mr-25 {
+  margin-right: 0.66667rem; }
+
+.mt-25 {
+  margin-top: 0.66667rem; }
+
+.mb-25 {
+  margin-bottom: 0.66667rem; }
+
+.ml-25 {
+  margin-left: 0.66667rem; }
+
+.pt-25 {
+  padding-top: 0.66667rem; }
+
+.pr-25 {
+  padding-right: 0.66667rem; }
+
+.pb-25 {
+  padding-bottom: 0.66667rem; }
+
+.pl-25 {
+  padding-left: 0.66667rem; }
+
+.fs-38 {
+  font-size: 1.01333rem; }
+
+.mr-30 {
+  margin-right: 0.8rem; }
+
+.mt-30 {
+  margin-top: 0.8rem; }
+
+.mb-30 {
+  margin-bottom: 0.8rem; }
+
+.ml-30 {
+  margin-left: 0.8rem; }
+
+.pt-30 {
+  padding-top: 0.8rem; }
+
+.pr-30 {
+  padding-right: 0.8rem; }
+
+.pb-30 {
+  padding-bottom: 0.8rem; }
+
+.pl-30 {
+  padding-left: 0.8rem; }
+
+/* 字体大小、margin、padding间距 end */
+.color-333 {
+  color: #333; }
+
+.color-666 {
+  color: #666; }
+
+.color-999 {
+  color: #999; }
+
+.mt-140 {
+  margin-top: 3.73333rem !important; }
+
+/*  flex布局 start */
+.flex {
+  display: flex; }
+
+.flex-1 {
+  flex: 1; }
+
+.flex-jc-sb {
+  justify-content: space-between; }
+
+.flex-jc-c {
+  justify-content: center; }
+
+.flex-ai-c {
+  align-items: center; }
+
+.flex-d-c {
+  flex-direction: column; }
+
+/* flex布局 end */
+.tx-c {
+  text-align: center; }
+
+.tx-l {
+  text-align: left; }
+
+.tx-r {
+  text-align: right; }
+
+.bor-t {
+  border-top: 1px solid #e5e5e5; }
+
+.bor-b {
+  border-bottom: 1px solid #e5e5e5; }
+
+.bor-l {
+  border-left: 1px solid #e5e5e5; }
+
+.bor-b-none {
+  border-bottom: none; }
+
+/* 背景模糊效果 */
+.blur {
+  filter: blur(3px); }
+
+.clear {
+  zoom: 1; }
+
+.clear:after {
+  content: '';
+  display: block;
+  clear: both; }
+
+.db {
+  display: block; }
+
+.dib {
+  display: inline-block; }
+
+.di-vm {
+  display: inline-block;
+  vertical-align: middle;
+  /* 垂直居中 */ }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+/*
+    fixed底部定位
+*/
+.position-fixed-t {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0; }
+
+.position-fixed-b {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+/* 旋转动画 */
+@keyframes loading {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+.loading {
+  width: 2.96rem !important;
+  height: 2.96rem !important;
+  background: url(../images/loading.png) no-repeat !important;
+  background-size: contain !important;
+  animation: loading 2.5s infinite linear; }
+
+@keyframes fadeRoute {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.animate-route {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadeRoute; }
+
+/* 水波效果 */
+@keyframes sploosh {
+  0% {
+    box-shadow: 0 0 0 0px rgba(38, 191, 197, 0.5);
+    background: rgba(38, 191, 197, 0.5); }
+  100% {
+    box-shadow: 0 0 0 20px rgba(38, 191, 197, 0);
+    background: rgba(38, 191, 197, 0); } }
+.sploosh {
+  animation: sploosh 2s cubic-bezier(0.165, 0.84, 0.44, 1); }
+
+.App {
+  font-family: "PingFang,微软雅黑";
+  color: #666;
+  background-color: #fff;
+  font-size: 0.64rem !important;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  flex-direction: column;
+  overflow: scroll;
+  letter-spacing: 0.05333rem; }
+
+/*按钮边框样式*/
+/*输入框、下拉框、文本域样式 APP*/
+/* 背景图 */
+/* 文字超出多行隐藏 */
+/* 圆 */
+/* header start */
+header {
+  font-size: 0.96rem;
+  color: #fff;
+  background-color: #395dcf;
+  position: fixed;
+  top: 0;
+  width: 100%; }
+  header .l, header .r {
+    padding: 0 0.8rem;
+    height: 2.29333rem;
+    min-width: 3.2rem;
+    display: flex;
+    align-items: center; }
+  header h1 {
+    font-weight: bold; }
+  header .angle-left {
+    width: 0.61333rem;
+    height: 1.01333rem;
+    background: url("../images/return-back.png") no-repeat center;
+    background-size: contain;
+    display: block; }
+
+/* header end */
+/* contain start */
+.contain {
+  flex: 1;
+  overflow: scroll;
+  padding-top: 2.29333rem;
+  padding-bottom: 2.66667rem; }
+
+/* contain end */
+/* footer start */
+footer {
+  padding: 0.4rem 0.53333rem;
+  border-top: 1px solid #e5e5e5;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 2.66667rem; }
+  footer .icon1 {
+    width: 1.06667rem;
+    height: 1.06667rem;
+    background: url("../images/f-icon1.png") no-repeat center;
+    background-size: contain;
+    display: block;
+    margin-bottom: 0.26667rem; }
+  footer .icon2 {
+    width: 1.06667rem;
+    height: 1.06667rem;
+    background: url("../images/f-icon2.png") no-repeat center;
+    background-size: contain;
+    display: block;
+    margin-bottom: 0.26667rem; }
+  footer .icon3 {
+    width: 1.06667rem;
+    height: 1.06667rem;
+    background: url("../images/f-icon3.png") no-repeat center;
+    background-size: contain;
+    display: block;
+    margin-bottom: 0.26667rem; }
+  footer .icon4 {
+    width: 1.06667rem;
+    height: 1.06667rem;
+    background: url("../images/f-icon4.png") no-repeat center;
+    background-size: contain;
+    display: block;
+    margin-bottom: 0.26667rem; }
+  footer .icon5 {
+    width: 1.06667rem;
+    height: 1.06667rem;
+    background: url("../images/f-icon5.png") no-repeat center;
+    background-size: contain;
+    display: block;
+    margin-bottom: 0.26667rem; }
+  footer div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 3.2rem;
+    color: #666; }
+    footer div.active {
+      color: #ac2417; }
+      footer div.active .icon1 {
+        width: 1.06667rem;
+        height: 1.06667rem;
+        background: url("../images/f-icon1-active.png") no-repeat center;
+        background-size: contain;
+        display: block;
+        margin-bottom: 0.26667rem; }
+      footer div.active .icon2 {
+        width: 1.06667rem;
+        height: 1.06667rem;
+        background: url("../images/f-icon2-active.png") no-repeat center;
+        background-size: contain;
+        display: block;
+        margin-bottom: 0.26667rem; }
+      footer div.active .icon3 {
+        width: 1.06667rem;
+        height: 1.06667rem;
+        background: url("../images/f-icon3-active.png") no-repeat center;
+        background-size: contain;
+        display: block;
+        margin-bottom: 0.26667rem; }
+      footer div.active .icon4 {
+        width: 1.06667rem;
+        height: 1.06667rem;
+        background: url("../images/f-icon4-active.png") no-repeat center;
+        background-size: contain;
+        display: block;
+        margin-bottom: 0.26667rem; }
+      footer div.active .icon5 {
+        width: 1.06667rem;
+        height: 1.06667rem;
+        background: url("../images/f-icon5-active.png") no-repeat center;
+        background-size: contain;
+        display: block;
+        margin-bottom: 0.26667rem; }
+
+/* footer end */
+/* Base.js start */
+.list-botton {
+  height: 2.34667rem;
+  padding: 0 0.8rem;
+  font-size: 0.85333rem;
+  color: #000;
+  background-color: #fff; }
+  .list-botton .icon1 {
+    width: 1.06667rem;
+    height: 1.06667rem;
+    background: url("../images/my/icon1.png") no-repeat center;
+    background-size: contain;
+    display: block; }
+  .list-botton .icon2 {
+    width: 1.06667rem;
+    height: 1.06667rem;
+    background: url("../images/my/icon2.png") no-repeat center;
+    background-size: contain;
+    display: block; }
+  .list-botton .icon3 {
+    width: 1.06667rem;
+    height: 1.06667rem;
+    background: url("../images/my/icon3.png") no-repeat center;
+    background-size: contain;
+    display: block; }
+  .list-botton .icon4 {
+    width: 1.06667rem;
+    height: 1.06667rem;
+    background: url("../images/my/icon4.png") no-repeat center;
+    background-size: contain;
+    display: block; }
+  .list-botton .icon5 {
+    width: 1.06667rem;
+    height: 1.06667rem;
+    background: url("../images/my/icon5.png") no-repeat center;
+    background-size: contain;
+    display: block; }
+  .list-botton .icon6 {
+    width: 1.06667rem;
+    height: 1.06667rem;
+    background: url("../images/my/icon6.png") no-repeat center;
+    background-size: contain;
+    display: block; }
+  .list-botton:hover {
+    background-color: #f2f2f2; }
+  .list-botton b {
+    flex: 1;
+    margin: 0 0.8rem; }
+  .list-botton .avatar {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 0.8rem; }
+    .list-botton .avatar img {
+      width: 2.13333rem;
+      height: 2.13333rem;
+      border-radius: 2.13333rem; }
+  .list-botton .check-radio {
+    width: 0.56rem;
+    height: 0.45333rem;
+    background: url("../images/check-radio.png") no-repeat center;
+    background-size: contain;
+    display: block; }
+
+.my-info-sty {
+  height: 3.73333rem;
+  padding-left: 0;
+  margin-left: 0.8rem;
+  border-bottom: 1px solid #e5e5e5; }
+
+.angle-right {
+  width: 0.42667rem;
+  height: 0.74667rem;
+  background: url("../images/my/angle-right.png") no-repeat center;
+  background-size: contain;
+  display: block; }
+
+/* Base.js end */
+/* SubmitBotton start */
+.submit-botton {
+  border: none;
+  background-color: #395dcf;
+  border-radius: 1.06667rem;
+  text-align: center;
+  width: 14.93333rem;
+  height: 2.13333rem;
+  line-height: 2.13333rem;
+  font-size: 0.8rem;
+  color: #fff;
+  margin: 0.8rem auto; }
+
+/* SubmitBotton end */
+/* pc-dialog start */
+.pc-select {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: auto; }
+  .pc-select .ceng {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    left: 0;
+    top: 0; }
+  .pc-select .content {
+    position: fixed;
+    width: 100%;
+    height: 13.33333rem;
+    bottom: 0;
+    left: 0;
+    background-color: #fff; }
+  .pc-select .title {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #dcdcdc; }
+    .pc-select .title span {
+      padding: 0.8rem 1.33333rem;
+      color: #65b3e5;
+      font-size: 0.74667rem; }
+      .pc-select .title span:nth-child(2) {
+        font-weight: bold;
+        color: #333; }
+  .pc-select ul {
+    height: 10.66667rem;
+    overflow: scroll; }
+  .pc-select li {
+    padding: 0.8rem;
+    text-align: center;
+    border-top: 1px solid #dcdcdc; }
+    .pc-select li:first-child {
+      border-top: 0; }
+    .pc-select li:active, .pc-select li:hover {
+      background-color: #dcdcdc; }
+
+/* pc-dialog end */
+/* 旋转动画 */
+@keyframes loading {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+.loading {
+  width: 2.96rem !important;
+  height: 2.96rem !important;
+  background: url(../images/loading.png) no-repeat !important;
+  background-size: contain !important;
+  animation: loading 2.5s infinite linear; }
+
+@keyframes fadeRoute {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.animate-route {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadeRoute; }
+
+/* 水波效果 */
+@keyframes sploosh {
+  0% {
+    box-shadow: 0 0 0 0px rgba(38, 191, 197, 0.5);
+    background: rgba(38, 191, 197, 0.5); }
+  100% {
+    box-shadow: 0 0 0 20px rgba(38, 191, 197, 0);
+    background: rgba(38, 191, 197, 0); } }
+.sploosh {
+  animation: sploosh 2s cubic-bezier(0.165, 0.84, 0.44, 1); }
+
+/* 我的 */
+.my .bg {
+  height: 4.8rem;
+  background-color: #395dcf; }
+.my .avatar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -3.38667rem; }
+  .my .avatar div {
+    width: 6.77333rem;
+    height: 6.77333rem;
+    border-radius: 6.77333rem;
+    background-color: #ccc;
+    border: 0.26667rem solid #dadada;
+    position: relative; }
+    .my .avatar div img {
+      border-radius: 100%; }
+  .my .avatar p {
+    font-size: 0.96rem;
+    color: #000000;
+    padding: 0.53333rem; }
+  .my .avatar span {
+    border: none;
+    background-color: #395dcf;
+    border-radius: 0.53333rem;
+    text-align: center;
+    width: 4.26667rem;
+    height: 1.06667rem;
+    line-height: 1.06667rem;
+    font-size: 0.58667rem;
+    color: #fff;
+    display: block;
+    margin-bottom: 0.8rem; }
+
+.man-icon, .woman-icon {
+  width: 1.06667rem;
+  height: 1.06667rem;
+  border-radius: 1.06667rem;
+  background-color: #3d9dff;
+  display: block;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0.08rem;
+  top: 0.32rem; }
+  .man-icon::after, .woman-icon::after {
+    content: "";
+    width: 0.64rem;
+    height: 0.64rem;
+    background: url("../images/my/man-icon.png") no-repeat center;
+    background-size: contain;
+    display: block; }
+
+.woman-icon::after {
+  content: "";
+  width: 0.64rem;
+  height: 0.64rem;
+  background: url("../images/my/woman.png") no-repeat center;
+  background-size: contain;
+  display: block; }
+
+/* 用户名 */
+.update {
+  padding: 0.8rem;
+  box-sizing: border-box;
+  /* 绑定手机 */
+  /* 验证码 */ }
+  .update input {
+    border: 1px solid #dcdcdc;
+    background-color: #fff;
+    border-radius: 0;
+    width: 100%;
+    height: 2.66667rem;
+    line-height: 2.66667rem;
+    padding: 0 0.8rem;
+    display: block;
+    font-size: 0.85333rem;
+    color: #666;
+    border-radius: 0.13333rem; }
+  .update .bind-phone .bind-phone-icon, .update .bind-phone .not-bind-phone-icon {
+    width: 2.82667rem;
+    height: 3.25333rem;
+    background: url("../images/my/bind-phone-icon.png") no-repeat center;
+    background-size: contain;
+    display: block;
+    margin-top: 300px;
+    margin: 150px auto 70px auto; }
+  .update .bind-phone .not-bind-phone-icon {
+    width: 2.82667rem;
+    height: 3.25333rem;
+    background: url("../images/my/not-bind-phone-icon.png") no-repeat center;
+    background-size: contain;
+    display: block; }
+  .update .bind-phone span {
+    font-size: 1.06667rem;
+    display: block;
+    margin: 0 auto;
+    text-align: center; }
+  .update .get-yzm {
+    margin-top: 20px; }
+    .update .get-yzm input {
+      width: 60%; }
+    .update .get-yzm span {
+      width: 30%;
+      border: 1px solid #dcdcdc;
+      height: 2.66667rem;
+      margin-left: 0.53333rem;
+      text-align: center;
+      line-height: 2.66667rem;
+      background-color: #41cbc9;
+      border-radius: 0.26667rem;
+      color: #fff; }
+
+/* 发布需求 */
+.release-require {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  z-index: 222;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column; }
+  .release-require nav {
+    padding: 0 0.8rem;
+    flex-wrap: wrap; }
+  .release-require span {
+    width: calc(100%/3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1.6rem; }
+  .release-require .icon1 {
+    margin-bottom: 0.53333rem;
+    width: 3.33333rem;
+    height: 3.33333rem;
+    background: url("../images/releaseRequire/icon1.png") no-repeat center;
+    background-size: contain;
+    display: block; }
+  .release-require .icon2 {
+    margin-bottom: 0.53333rem;
+    width: 3.33333rem;
+    height: 3.33333rem;
+    background: url("../images/releaseRequire/icon2.png") no-repeat center;
+    background-size: contain;
+    display: block; }
+  .release-require .icon3 {
+    margin-bottom: 0.53333rem;
+    width: 3.33333rem;
+    height: 3.33333rem;
+    background: url("../images/releaseRequire/icon3.png") no-repeat center;
+    background-size: contain;
+    display: block; }
+  .release-require .icon4 {
+    margin-bottom: 0.53333rem;
+    width: 3.33333rem;
+    height: 3.33333rem;
+    background: url("../images/releaseRequire/icon4.png") no-repeat center;
+    background-size: contain;
+    display: block; }
+  .release-require .icon5 {
+    margin-bottom: 0.53333rem;
+    width: 3.33333rem;
+    height: 3.33333rem;
+    background: url("../images/releaseRequire/icon5.png") no-repeat center;
+    background-size: contain;
+    display: block; }
+  .release-require .icon6 {
+    margin-bottom: 0.53333rem;
+    width: 3.33333rem;
+    height: 3.33333rem;
+    background: url("../images/releaseRequire/icon6.png") no-repeat center;
+    background-size: contain;
+    display: block; }
+  .release-require .icon7 {
+    margin-bottom: 0.53333rem;
+    width: 3.33333rem;
+    height: 3.33333rem;
+    background: url("../images/releaseRequire/icon7.png") no-repeat center;
+    background-size: contain;
+    display: block; }
+  .release-require .icon8 {
+    margin-bottom: 0.53333rem;
+    width: 3.33333rem;
+    height: 3.33333rem;
+    background: url("../images/releaseRequire/icon8.png") no-repeat center;
+    background-size: contain;
+    display: block; }
+  .release-require .cancel-icon {
+    width: 2.13333rem;
+    height: 2.13333rem;
+    background: url("../images/releaseRequire/icon-cancel.png") no-repeat center;
+    background-size: contain;
+    display: block;
+    margin: 2.66667rem auto 1.06667rem auto; }
+
+.release-bg {
+  width: 100%;
+  height: 100vh;
+  background: url("../images/releaseRequire/bg.png") no-repeat center;
+  background-size: cover;
+  filter: blur(2px);
+  display: block; }
+
+/* list-input-sty */
+.list-input-sty {
+  background-color: #fff;
+  padding: 0 0.53333rem;
+  border-bottom: 1px solid #dcdcdc; }
+  .list-input-sty span {
+    font-size: 0.96rem;
+    color: #333; }
+  .list-input-sty label {
+    color: red; }
+  .list-input-sty input {
+    min-width: 13.33333rem;
+    border: none;
+    padding: 0.8rem 0;
+    outline: none;
+    text-align: right;
+    font-size: 0.74667rem;
+    color: #666; }
+    .list-input-sty input::-webkit-input-placeholder {
+      color: #999; }
+    .list-input-sty input:disabled {
+      background-color: #fff;
+      margin-right: 0.53333rem; }
+
+/* textarea-sty */
+.textarea-sty {
+  background-color: #fff;
+  margin-top: 0.53333rem;
+  padding: 0 0.53333rem; }
+  .textarea-sty p {
+    font-size: 0.96rem;
+    color: #333;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #dcdcdc; }
+  .textarea-sty textarea {
+    padding: 0.8rem 0;
+    width: 100%;
+    border: none;
+    min-height: 8rem;
+    font-size: 0.74667rem;
+    color: #666;
+    resize: none;
+    outline: none; }
+    .textarea-sty textarea::-webkit-input-placeholder {
+      color: #999; }
+  .textarea-sty span {
+    display: block;
+    text-align: right;
+    font-size: 0.69333rem;
+    padding-bottom: 0.8rem; }
+    .textarea-sty span b {
+      color: #395dcf; }
+
+/* 上传图片 */
+.upload-img {
+  background-color: #fff;
+  margin-top: 0.53333rem;
+  padding: 0 0.26667rem; }
+  .upload-img p {
+    font-size: 0.96rem;
+    color: #333;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #dcdcdc; }
+  .upload-img > div {
+    margin-top: 0.8rem;
+    flex-wrap: wrap; }
+    .upload-img > div div {
+      width: 4.33333rem;
+      height: 4.33333rem;
+      margin: 0 0.26667rem 0.53333rem 0.26667rem;
+      background-color: #ccc;
+      border-radius: 0.26667rem;
+      position: relative; }
+  .upload-img .add {
+    width: 4.33333rem;
+    height: 4.33333rem;
+    background: url("../images/releaseRequire/add-image.png") no-repeat center;
+    background-size: contain;
+    display: block; }
+  .upload-img .delete {
+    width: 0.8rem;
+    height: 0.8rem;
+    background: url("../images/releaseRequire/delete.png") no-repeat center;
+    background-size: contain;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0; }
+
+/*# sourceMappingURL=main.css.map */

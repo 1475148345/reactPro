@@ -1,0 +1,36 @@
+@charset "UTF-8";
+/* 旋转动画 */
+@keyframes loading {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+.loading {
+  width: 2.96rem !important;
+  height: 2.96rem !important;
+  background: url(../images/loading.png) no-repeat !important;
+  background-size: contain !important;
+  animation: loading 2.5s infinite linear; }
+
+@keyframes fadeRoute {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.animate-route {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: fadeRoute; }
+
+/* 水波效果 */
+@keyframes sploosh {
+  0% {
+    box-shadow: 0 0 0 0px rgba(38, 191, 197, 0.5);
+    background: rgba(38, 191, 197, 0.5); }
+  100% {
+    box-shadow: 0 0 0 20px rgba(38, 191, 197, 0);
+    background: rgba(38, 191, 197, 0); } }
+.sploosh {
+  animation: sploosh 2s cubic-bezier(0.165, 0.84, 0.44, 1); }
+
+/*# sourceMappingURL=animate.css.map */
