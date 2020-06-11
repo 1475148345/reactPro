@@ -16,8 +16,8 @@ let myController={
     },
      /* 获取短信验证码 */
     getSMS:function(params,callback){
-        const accessKeyId = '';
-        const secretAccessKey = '';
+        const accessKeyId = ' ';
+        const secretAccessKey = ' ';
         let smsClient = new SMSClient({accessKeyId, secretAccessKey});
         smsClient.sendSMS({
             PhoneNumbers: params.phone,
